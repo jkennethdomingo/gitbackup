@@ -7,7 +7,6 @@
     <title>Kenneth's Git Backup Tutorial</title>
 
     <link rel="stylesheet" href="styles.css">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <style> 
@@ -57,6 +56,52 @@
         color: #0056b3;
         text-decoration: underline;
     }
+
+    .code-block {
+        position: relative;
+        background-color: #f5f5f5;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .code-block-carousel {
+        position: relative;
+        width: 19%;
+        background-color: #f5f5f5;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    pre {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    .copy-btn {
+        background: none;
+        border: none;
+        color: #0366d6;
+        cursor: pointer;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 1.2rem;
+        transition: color 0.3s;
+    }
+
+    .copy-btn:hover {
+        color: #0056b3;
+    }
+
+    .copy-btn i {
+        font-size: 1.4rem;
+    }
 </style>
 <body>
     <header>
@@ -78,36 +123,62 @@
             <div class="carousel-content">
                 <div class="carousel-slide">
                     <h3>Step 1: Initialize a Git Repository</h3>
-                    <p>To start using Git, navigate to your project directory and run:</p>
-                    <pre><code>git init</code></pre>
+                    <div class="code-block-carousel">
+                        <button class="copy-btn" data-code="git init">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                        <pre><code>git init</code></pre>
+                    </div>
                     <p>This will create a new Git repository in the current directory.</p>
                 </div>
 
                 <div class="carousel-slide">
                     <h3>Step 2: Staging Changes</h3>
-                    <p>Once you've made changes to your project files, you need to add them to the staging area using:</p>
-                    <pre><code>git add .</code></pre>
+                    <div class="code-block-carousel">
+                        <button class="copy-btn" data-code="git add .">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                        <pre><code>git add .</code></pre>
+                    </div>
                     <p>This command stages all the modified files in the current directory. Alternatively, you can specify individual files to stage:</p>
-                    <pre><code>git add filename</code></pre>
+                    <div class="code-block-carousel">
+                        <button class="copy-btn" data-code="git add filename">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                        <pre><code>git add filename</code></pre>
+                    </div>
                 </div>
 
                 <div class="carousel-slide">
                     <h3>Step 3: Check the Status of Your Repository</h3>
-                    <p>Before committing your changes, it's a good idea to check the current status of your repository. You can see which files are staged and unstaged by running:</p>
-                    <pre><code>git status</code></pre>
+                    <div class="code-block-carousel">
+                        <button class="copy-btn" data-code="git status">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                        <pre><code>git status</code></pre>
+                    </div>
+                    <p>You can see which files are staged and unstaged by running the status command.</p>
                 </div>
 
                 <div class="carousel-slide">
                     <h3>Step 4: Commit Your Changes</h3>
-                    <p>Once you're satisfied with the files in the staging area, commit them with a message describing the changes:</p>
-                    <pre><code>git commit -m "Your commit message here"</code></pre>
+                    <div class="code-block-carousel">
+                        <button class="copy-btn" data-code="git commit -m 'Your commit message here'">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                        <pre><code>git commit -m "Your commit message here"</code></pre>
+                    </div>
                     <p>This creates a new snapshot of your project with the current changes.</p>
                 </div>
 
                 <div class="carousel-slide">
                     <h3>Step 5: View Commit History</h3>
-                    <p>To see a log of your commit history, use the following command:</p>
-                    <pre><code>git log</code></pre>
+                    <div class="code-block-carousel">
+                        <button class="copy-btn" data-code="git log">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                        <pre><code>git log</code></pre>
+                    </div>
                     <p>This displays a list of previous commits, including the commit message, hash, and author details.</p>
                 </div>
             </div>
@@ -127,12 +198,20 @@
         <p>After making commits locally, you can push them to a remote repository, such as GitHub. Follow these steps:</p>
 
         <h3>Step 1: Link Your Repository to GitHub</h3>
-        <p>First, create a new repository on GitHub and copy the repository URL. Then, link your local repository to GitHub using:</p>
-        <pre><code>git remote add origin https://github.com/yourusername/yourrepository.git</code></pre>
+        <div class="code-block">
+            <button class="copy-btn" data-code="git remote add origin https://github.com/yourusername/yourrepository.git">
+                <i class="fas fa-copy"></i>
+            </button>
+            <pre><code>git remote add origin https://github.com/yourusername/yourrepository.git</code></pre>
+        </div>
 
         <h3>Step 2: Push Your Changes</h3>
-        <p>To upload your local commits to GitHub, run the following command:</p>
-        <pre><code>git push -u origin master</code></pre>
+        <div class="code-block">
+            <button class="copy-btn" data-code="git push -u origin master">
+                <i class="fas fa-copy"></i>
+            </button>
+            <pre><code>git push -u origin master</code></pre>
+        </div>
         <p>This will push your changes to the <code>master</code> branch on GitHub.</p>
     </section>
 
@@ -151,5 +230,7 @@
     <footer>
         <p>&copy; 2024 Kenneth's Git Backup Tutorial. All rights reserved.</p>
     </footer>
+    
+    <script src="main.js"></script>
 </body>
 </html>
