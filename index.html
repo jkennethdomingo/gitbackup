@@ -10,6 +10,54 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+<style> 
+    .github-card {
+        display: flex;
+        align-items: center;
+        background-color: #f0f0f0;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .github-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .github-icon {
+        font-size: 3rem;
+        color: #0366d6;
+        margin-right: 15px;
+    }
+
+    .github-text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .github-text h3 {
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+    .github-text p {
+        margin: 5px 0;
+    }
+
+    .github-link {
+        color: #0366d6;
+        font-weight: bold;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .github-link:hover {
+        color: #0056b3;
+        text-decoration: underline;
+    }
+</style>
 <body>
     <header>
         <i class="fab fa-github github-logo"></i>
@@ -90,16 +138,14 @@
 
     <section>
         <h2>Learn More</h2>
-        <button onclick="document.getElementById('git-modal').showModal();">
-            <i class="fab fa-github"></i> View My GitHub
-        </button>
-        
-        <dialog id="git-modal">
-            <h3>Kenneth's GitHub</h3>
-            <p>Unfortunately, GitHub does not support embedding profiles, but you can visit my profile by clicking the link below:</p>
-            <p><a href="https://github.com/jkennethdomingo" target="_blank">Visit Kenneth's GitHub</a></p>
-            <button onclick="document.getElementById('git-modal').close();">Close</button>
-        </dialog>
+        <div class="github-card">
+            <i class="fab fa-github github-icon"></i>
+            <div class="github-text">
+                <h3>Visit My GitHub</h3>
+                <p>Explore my projects and repositories on GitHub.</p>
+                <a href="https://github.com/jkennethdomingo" target="_blank" class="github-link">Check it out!</a>
+            </div>
+        </div>
     </section>
 
     <footer>
