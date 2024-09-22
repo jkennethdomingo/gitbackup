@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background-color: #24292e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h2 {
+    color: #0366d6;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+pre {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: "Courier New", Courier, monospace;
+    border-left: 5px solid #0366d6;
+}
+
+code {
+    font-size: 1rem;
+    color: #24292e;
+    font-weight: bold;
+}
+
+button i {
+    margin-right: 8px;
+}
+
+dialog {
+    border: 2px solid #0366d6;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #24292e;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+a {
+    color: #0366d6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-content {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 500%;
+}
+
+.carousel-slide {
+    flex-shrink: 0;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+#slide1:checked ~ .carousel-content {
+    transform: translateX(0);
+}
+
+#slide2:checked ~ .carousel-content {
+    transform: translateX(-100%);
+}
+
+#slide3:checked ~ .carousel-content {
+    transform: translateX(-200%);
+}
+
+#slide4:checked ~ .carousel-content {
+    transform: translateX(-300%);
+}
+
+#slide5:checked ~ .carousel-content {
+    transform: translateX(-400%);
+}
+
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.carousel-nav label {
+    width: 15px;
+    height: 15px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="radio"]:checked + label {
+    background-color: #0366d6;
+}
