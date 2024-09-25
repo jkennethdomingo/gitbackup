@@ -1,3 +1,5 @@
+// Test comment
+
 document.addEventListener('DOMContentLoaded', function() {
     const copyButtons = document.querySelectorAll('.copy-btn');
 
